@@ -1,0 +1,9 @@
+streamlit
+pymongo
+streamlit-option-menu
+python-dotenv
+bcrypt
+pandas
+plotly
+PyMuPDF
+mistralai
