@@ -12,8 +12,7 @@ from datetime import datetime, timedelta
 
 # Load environment variables
 load_dotenv()
-MONGO_URI = st.secrets("MONGO_URI")  # Securely fetch MongoDB URI from .env
-
+MONGO_URI = st.secrets["MONGO_URI"]  
 # Connect to MongoDB
 client = MongoClient(MONGO_URI)
 
