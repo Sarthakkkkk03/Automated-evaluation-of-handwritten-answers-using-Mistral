@@ -17,7 +17,7 @@ import math
 
 # Load environment variables
 load_dotenv()
-MONGO_URI = st.secrets("MONGO_URI")  # Securely fetch MongoDB URI from .env
+MONGO_URI = st.secrets["MONGO_URI"]  # Securely fetch MongoDB URI from .env
 
 # Connect to MongoDB
 client = MongoClient(MONGO_URI)
@@ -283,8 +283,8 @@ elif selected == "📊 Evaluate the Test":
     teacher_db = client[teacher_name]
 
     # Initialize Mistral API with separate keys for different functions
-    MISTRAL_API_KEY_IMAGE = st.secrets("MISTRAL_API_KEY_IMAGE")
-    MISTRAL_API_KEY_EVALUATION = st.secrets("MISTRAL_API_KEY_EVALUATION")
+    MISTRAL_API_KEY_IMAGE = st.secrets["MISTRAL_API_KEY_IMAGE"]
+    MISTRAL_API_KEY_EVALUATION = st.secrets["MISTRAL_API_KEY_EVALUATION"]
     
     # Create separate Mistral clients for each functionality
     mistral_image_client = Mistral(api_key=MISTRAL_API_KEY_IMAGE)
